@@ -105,9 +105,55 @@
           width: 100% !important;
         }
 
-        
-      >img.img-responsive{display: block !important;}
-        >img.img-nonresponsive{display: none !important;}
+        >img.img-responsive {
+          display: block !important;
+        }
+
+        >img.img-nonresponsive {
+          display: none !important;
+        }
+      }
+
+      .container-certi {
+        display: none !important;
+      }
+
+      .container-contact {
+        justify-content: center !important;
+        padding-bottom: 40px !important;
+        border-bottom: none !important;
+        flex-direction: column;
+
+        >* {
+          flex-direction: column !important;
+        }
+      }
+
+      .input-contact {
+        width: 242px !important;
+      }
+
+      .button-contact {
+        font-size: 17px !important;
+        letter-spacing: 1.7px !important;
+        line-height: 22px !important;
+        padding: 13px 20px !important;
+      }
+
+      .footer {
+        margin-top: 60px !important;
+        padding-bottom: 27px !important;
+      }
+
+      .span-introcontact {
+        width: max-content !important;
+        margin: 0 0 20px 0 !important;
+      }
+      
+      .container-footerinfor{
+        grid-template-columns: auto !important;
+        padding: 0 20px !important;
+        row-gap: 40px;
       }
     }
 
@@ -232,7 +278,46 @@
       margin-top: 100px;
       height: max-content;
       align-items: center;
-      >img.img-responsive{display: none;}
+
+      >img.img-responsive {
+        display: none;
+      }
+    }
+
+    .container-certi {
+      width: 100%;
+      height: 160px;
+      background: white;
+      border-radius: 10px;
+      border: 1px #1a11141f solid;
+      margin-top: 100px;
+      display: grid;
+      justify-content: space-between;
+      align-items: center;
+      grid-template-columns: auto auto auto;
+      padding: 0 70px;
+    }
+
+    .container-contact {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding-bottom: 80px;
+      border-bottom: solid 1px #1a11141f;
+    }
+
+    .span-introcontact {
+      color: #1A1114;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 22px;
+      word-wrap: break-word;
+      margin-right: 30px;
+      width: 210px;
+    }
+    .container-footerinfor{
+      display: grid; grid-template-columns: auto auto auto auto; justify-content: space-between; align-items: start; width: 100%; padding-bottom: 70px; padding-top: 70px; border-bottom: solid 1px #1a11141f;
     }
   </style>
 </head>
@@ -422,10 +507,14 @@
       </div>
     </div>
     <div class="container-image">
-      <img class="img-nonresponsive" style="width: 420px; height: 550px; border-radius: 20px" src="https://via.placeholder.com/420x550" />
-      <img class="img-nonresponsive" style="width: 420px; height: 675px; border-radius: 20px" src="https://via.placeholder.com/420x550" />
-      <img class="img-responsive" style="height: 230px; border-radius: 20px" src="https://via.placeholder.com/180x230" />
-      <img class="img-responsive" style="height: 280px; border-radius: 20px" src="https://via.placeholder.com/180x280" />
+      <img class="img-nonresponsive" style="width: 420px; height: 550px; border-radius: 20px"
+        src="https://via.placeholder.com/420x550" />
+      <img class="img-nonresponsive" style="width: 420px; height: 675px; border-radius: 20px"
+        src="https://via.placeholder.com/420x550" />
+      <img class="img-responsive" style="height: 230px; border-radius: 20px"
+        src="https://via.placeholder.com/180x230" />
+      <img class="img-responsive" style="height: 280px; border-radius: 20px"
+        src="https://via.placeholder.com/180x280" />
       <div
         style="width: 420px; height: 550px; background: #FDF4F7; border-radius: 20px; display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 88px 40px;">
         <span
@@ -515,8 +604,7 @@
         </svg>
       </div>
     </div>
-    <div
-      style="width: 100%; height: 160px; background: white; border-radius: 10px; border: 1px #1a11141f solid; margin-top: 100px; display: grid; justify-content: space-between; align-items: center; grid-template-columns: auto auto auto; padding: 0 70px;">
+    <div class="container-certi">
       <div style="grid-column: 1; display: flex; justify-content: center; align-items: center;">
         <div style="width: 60px; height: 60px; border: solid 1px #EC80A0; border-radius: 50%; position: relative;">
           <svg width="29" height="25" viewBox="0 0 29 25" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -571,27 +659,26 @@
     </div>
   </div>
   <div class="footer">
-    <div
-      style="display: flex; justify-content: space-between; align-items: center; width: 100%; padding-bottom: 80px; border-bottom: solid 1px #1a11141f;">
+    <div class="container-contact">
       <span
         style="text-align: center; color: #1A1114; font-weight: 800; text-transform: uppercase; line-height: 70px; word-wrap: break-word"
         class="span-title">
         kito</span>
       <div style="display: flex; align-items: center;">
-        <span
-          style="color: #1A1114; font-size: 15px; font-weight: 700; line-height: 22px; word-wrap: break-word; margin-right: 30px;">Join
-          our list and get 20% off<br />your first purchase!</span>
-        <input
-          style="width: 330px; height: 50px; background: white; border-top-left-radius: 10px; border-bottom-left-radius: 10px; border: 1px #EC80A0 solid; padding-left: 10px;">
-        <button
-          style="width: max-content; height: 50px; color: white; font-size: 20px; padding: 13px 30px ; background: #EC80A0; border-top-right-radius: 10px; border-bottom-right-radius: 10px; font-weight: 700; text-transform: uppercase; line-height: 26px; letter-spacing: 2px; border: none">SUBSCRIBE
-        </button>
+        <span class="span-introcontact">Join
+          our list and get 20% off your first purchase!</span>
+        <div style="display: flex; align-items: center;">
+          <input class="input-contact"
+            style="width: 330px; height: 50px; background: white; border-top-left-radius: 10px; border-bottom-left-radius: 10px; border: 1px #EC80A0 solid; padding-left: 10px;">
+          <button class="button-contact"
+            style="width: max-content; height: 50px; color: white; font-size: 20px; padding: 13px 30px ; background: #EC80A0; border-top-right-radius: 10px; border-bottom-right-radius: 10px; font-weight: 700; text-transform: uppercase; line-height: 26px; letter-spacing: 2px; border: none">SUBSCRIBE
+          </button>
+        </div>
       </div>
     </div>
-    <div
-      style="display: grid; grid-template-columns: auto auto auto auto; justify-content: space-between; align-items: start; width: 100%; padding-bottom: 70px; padding-top: 70px; border-bottom: solid 1px #1a11141f;">
+    <div class="container-footerinfor">
       <div
-        style="width: 100%; grid-column: 1; background: white; display: flex; flex-direction: column; justify-content: center; align-items: start;">
+        style="width: 100%; background: white; display: flex; flex-direction: column; justify-content: center; align-items: start;">
         <span
           style="text-align: center; color: #1A1114; font-size: 24px; font-weight: 700; line-height: 31px; word-wrap: break-word; margin-bottom: 30px;">Contact
           info</span>
@@ -623,7 +710,7 @@
         </div>
       </div>
       <div
-        style="width: 100%; grid-column: 2; background: white; display: flex; flex-direction: column; justify-content: center; align-items: start;">
+        style="width: 100%; background: white; display: flex; flex-direction: column; justify-content: center; align-items: start;">
         <span
           style="text-align: center; color: #1A1114; font-size: 24px; font-weight: 700; line-height: 31px; word-wrap: break-word; margin-bottom: 30px;">Quick
           links</span>
@@ -639,7 +726,7 @@
         </div>
       </div>
       <div
-        style="width: 100%; grid-column: 3; background: white; display: flex; flex-direction: column; justify-content: center; align-items: start;">
+        style="width: 100%; background: white; display: flex; flex-direction: column; justify-content: center; align-items: start;">
         <span
           style="text-align: center; color: #1A1114; font-size: 24px; font-weight: 700; line-height: 31px; word-wrap: break-word; margin-bottom: 30px;">Information</span>
         <div style="display: grid; grid-template-columns: auto; gap: 25px; row-gap: 20px;">
@@ -654,7 +741,7 @@
         </div>
       </div>
       <div
-        style="width: 100%; grid-column: 4; background: white; display: flex; flex-direction: column; justify-content: center; align-items: start; padding-right: 180px;">
+        style="width: 100%; background: white; display: flex; flex-direction: column; justify-content: center; align-items: start; padding-right: 180px;">
         <span
           style="text-align: center; color: #1A1114; font-size: 24px; font-weight: 700; line-height: 31px; word-wrap: break-word; margin-bottom: 30px;">Follow
           us</span>
